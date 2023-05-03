@@ -92,7 +92,7 @@ function MyApp(props: AppPropsWithLayout & AppProps) {
 				{/* Icons and browser stuff */}
 
 				{/* Do not put this meta tag if you want to work and debug with next.js on mobile
-				Also check of node.exe is not blocked 
+				Also check of node.exe is not blocked
 				steps:
 				1. firewall & network setting
 				2. allow an app through firewall
@@ -153,12 +153,12 @@ function MyApp(props: AppPropsWithLayout & AppProps) {
 					name="viewport"
 					content="width=device-width, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
 				/>
-				<Partytown debug={true} forward={["dataLayer.push"]} />
+				<Partytown debug forward={["dataLayer.push"]} />
 			</Head>
 			{getLayout(
 				<ContextProviderGlobal>
 					<NextNProgress
-						color={""}
+						color=""
 						transformCSS={(css) => {
 							return (
 								<style>{css.replace("top: 15px;", "bottom: 15px;")}</style>
@@ -173,7 +173,7 @@ function MyApp(props: AppPropsWithLayout & AppProps) {
 							width: "100%",
 							zIndex: 100,
 						}}
-					></div>
+					/>
 					<main>
 						<Component {...pageProps} />
 						<Analytics />
